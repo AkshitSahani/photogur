@@ -1,2 +1,2 @@
-class Picture < ApplicationRecord::Base
+class Picture < ApplicationRecord
 end
