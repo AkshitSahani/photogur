@@ -1,0 +1,9 @@
+<h1> Album of all the existing photographs </h1>
+<%= link_to "Back to homepage", root_url %>
+
+<% @pictures.each do |pic| %>
+  <div>
+    <%= image_tag pic.url %> <br>
+    "<%= pic.title %>" by <%= pic.artist %>
+  </div>
+<% end %>

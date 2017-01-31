@@ -16,6 +16,10 @@ class PicturesController < ApplicationController
     end
   end
 
+  def album
+    @pictures = Picture.all
+  end
+
   def new
     @picture = Picture.new
   end
