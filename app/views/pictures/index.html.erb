@@ -1,19 +1,31 @@
 <h1>Most Recent Pictures</h1>
-<%= link_to "New Picture", "/pictures/new" %>
-<%= link_to "Make an album!", '/pictures/album' %>
+<div class="link-to">
+  <div class="new-pic-link">
+    <%= link_to "New Picture", "/pictures/new" %>
+  </div>
+  <div class="make-album">
+    <%= link_to "Make an album!", '/pictures/album' %>
+  </div>
+</div>
 
-<ul>
-  <% @most_recent_pictures.each do |picture| %>
-    <li><%= picture.title %></li>
+<br>
+
+<div class="most-rec">
+  <ul>
+    <% @most_recent_pictures.each do |picture| %>
+      <li><%= picture.title %></li>
+    <% end %>
+  </ul>
+</div>
+
+<h1> Pictures </h1>
+
+<div class="images">
+  <% @pictures.each do |pic| %>
+    <p><%= pic.title %>, <%= pic.artist %> </p>
+    <%= link_to image_tag(pic.url), "/pictures/#{pic.id}" %>
   <% end %>
-</ul>
-
-<h2> Pictures </h2>
-
-<% @pictures.each do |pic| %>
-  <p><%= pic.title %>, <%= pic.artist %> </p>
-  <%= link_to image_tag(pic.url), "/pictures/#{pic.id}" %>
-<% end %>
+</div>
 <br>
 <% @month_ago_pics. each do |picture| %>
   "<%= picture.title %>" by <%= picture.artist %>

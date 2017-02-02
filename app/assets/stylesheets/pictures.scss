@@ -10,8 +10,31 @@ h1 {
   font-family: fantasy;
   font-size: 50px;
   margin: 10px;
+  text-align: center;
 }
 
 a {
   font-size: 20px;
+}
+
+.images{
+  text-align: center;
+}
+
+.link-to{
+  text-align: center;
+  max-width: 75%;
+  margin: auto;
+}
+
+.new-pic-link{
+  float: left;
+}
+
+.make-album{
+  float: right;
+}
+
+li{
+  text-align: center;
 }
